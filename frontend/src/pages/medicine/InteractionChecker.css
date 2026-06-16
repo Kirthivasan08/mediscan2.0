@@ -1,0 +1,74 @@
+.inter-header { margin-bottom:20px; }
+.inter-header .section-title { display:flex;align-items:center;gap:10px; }
+
+.inter-search-wrap { position:relative;margin-bottom:12px; }
+.inter-search-icon { position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--text-3);pointer-events:none;z-index:1; }
+
+.inter-dropdown {
+  position:absolute;top:calc(100%+4px);left:0;right:0;z-index:50;
+  background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);overflow:hidden;max-height:280px;overflow-y:auto;
+}
+.inter-dropdown-item {
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 16px;border-bottom:1px solid var(--border);
+  background:none;border-left:none;border-right:none;border-top:none;
+  width:100%;text-align:left;cursor:pointer;transition:background 0.12s;
+  font-family:'Sora',sans-serif;
+}
+.inter-dropdown-item:last-child { border-bottom:none; }
+.inter-dropdown-item:hover { background:var(--bg-2); }
+.inter-drug-name { font-size:14px;font-weight:600;color:var(--text); }
+.inter-drug-sub  { }
+
+.selected-meds { display:flex;flex-wrap:wrap;gap:8px;margin-top:10px; }
+.selected-pill {
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 10px 6px 14px;
+  background:var(--primary-light);border:1.5px solid #bee3f8;border-radius:40px;
+  font-size:13px;font-weight:500;color:var(--primary);
+}
+.pill-strength { font-size:11px;background:rgba(0,119,204,0.15);padding:1px 6px;border-radius:10px; }
+.selected-pill button { background:none;border:none;cursor:pointer;color:var(--primary);font-size:16px;line-height:1;padding:0 2px; }
+.selected-pill button:hover { color:var(--danger); }
+
+/* Risk banner */
+.risk-banner {
+  display:flex;align-items:center;gap:16px;
+  padding:20px 24px;border-radius:var(--radius-lg);border:1.5px solid;
+  margin-bottom:16px;flex-wrap:wrap;
+}
+.risk-icon { font-size:28px;flex-shrink:0; }
+.risk-banner div { flex:1; }
+.risk-banner h2 { font-size:18px;font-weight:800;margin-bottom:4px; }
+.risk-banner p  { font-size:14px;color:var(--text-2); }
+.risk-score { font-size:13px;font-weight:700;flex-shrink:0; }
+
+/* Interactions */
+.inter-results-section { margin-bottom:16px; }
+.inter-results-section h3 { font-size:16px;font-weight:700;margin-bottom:12px; }
+
+.inter-item {
+  border-radius:var(--radius);border:1.5px solid var(--border);
+  background:var(--surface);padding:16px;margin-bottom:10px;
+}
+.inter-item.sev-severe   { border-color:#fed7d7;background:var(--danger-light); }
+.inter-item.sev-moderate { border-color:#feebc8;background:var(--warning-light); }
+.inter-item.sev-mild     { border-color:#bee3f8;background:var(--primary-light); }
+
+.inter-item-header { display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap; }
+.inter-drugs { display:flex;align-items:center;gap:8px;flex-wrap:wrap; }
+.drug-chip { background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:13px;font-weight:600;color:var(--primary);text-decoration:none; }
+.drug-chip:hover { border-color:var(--primary); }
+.inter-plus { font-size:14px;color:var(--text-3); }
+.inter-desc { font-size:14px;color:var(--text-2);line-height:1.5; }
+
+/* Warnings */
+.warn-block { background:var(--warning-light);border:1.5px solid #feebc8;border-radius:var(--radius);padding:16px; }
+.warn-block h4 { font-size:13px;font-weight:700;color:var(--warning);margin-bottom:6px; }
+.warn-row { background:var(--warning-light);border:1px solid #feebc8;border-radius:8px;padding:10px 14px;margin-bottom:6px; }
+.warn-row p { font-size:13.5px;color:var(--text-2); }
+
+.no-inter-msg { text-align:center;padding:32px;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--text-2); }
+
+.inter-report { display:flex;flex-direction:column;gap:4px; }

@@ -1,0 +1,117 @@
+.scanner-header { margin-bottom:24px; }
+.scanner-header .section-title { display:flex;align-items:center;gap:10px; }
+
+/* Tabs */
+.scan-tabs { display:flex;gap:6px;margin-bottom:20px;background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:6px; }
+.scan-tab  { flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px;background:none;border:none;border-radius:var(--radius);color:var(--text-2);font-size:13.5px;font-weight:500;cursor:pointer;transition:all 0.15s;font-family:'Sora',sans-serif; }
+.scan-tab svg  { width:16px;height:16px;flex-shrink:0; }
+.scan-tab.active { background:var(--primary);color:#fff; }
+.scan-tab:not(.active):hover { background:var(--bg-2);color:var(--text); }
+
+/* Scan area */
+.scan-area { padding:0;overflow:hidden; }
+
+/* Idle state */
+.camera-section,.manual-section { padding:48px 32px;text-align:center; }
+.scan-idle { display:flex;flex-direction:column;align-items:center;gap:16px; }
+.scan-idle-icon {
+  width:80px;height:80px;background:var(--primary-light);border:1.5px solid #bee3f8;
+  border-radius:20px;display:flex;align-items:center;justify-content:center;
+  animation:glow 3s ease infinite;
+}
+.scan-idle-icon svg { width:40px;height:40px;stroke:var(--primary); }
+.scan-idle h3 { font-size:20px;font-weight:700; }
+.scan-idle p  { max-width:340px;font-size:14px; }
+
+/* Camera live */
+.camera-live { padding:20px;display:flex;flex-direction:column;align-items:center;position:relative; }
+.scan-overlay { position:absolute;inset:0;background:rgba(255,255,255,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;z-index:10;font-size:14px;color:var(--text-2); }
+
+#qr-reader-container { width:100%!important;max-width:500px; }
+#qr-reader-container video { border-radius:var(--radius)!important; }
+#qr-reader-container__scan_region { background:#000!important; }
+#qr-reader-container__dashboard { background:var(--surface)!important;color:var(--text)!important;border-top:1px solid var(--border)!important;padding:12px!important; }
+#qr-reader-container__dashboard_section_csr button { background:var(--primary)!important;color:#fff!important;border:none!important;border-radius:var(--radius)!important;padding:8px 16px!important;font-family:'Sora',sans-serif!important;cursor:pointer!important; }
+
+/* Manual */
+.manual-section { display:flex;flex-direction:column;align-items:center;gap:16px; }
+.manual-form { display:flex;gap:10px;width:100%;max-width:480px; }
+.manual-form .form-input { flex:1; }
+
+/* Result card */
+.scan-result-card { border-radius:var(--radius-lg);overflow:hidden;border:1.5px solid var(--border);background:#fff;margin-bottom:20px; }
+.scan-result-card.found    { border-color:#b2f0e2; }
+.scan-result-card.not-found{ border-color:#fed7d7; }
+
+.med-result,.patient-result,.invalid-screen { padding:28px; }
+
+.result-topbar { display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px; }
+.result-status { display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:40px;font-size:13px;font-weight:700; }
+.result-status svg { width:15px;height:15px; }
+.result-status.success { background:var(--accent-light);color:var(--accent);border:1px solid #b2f0e2; }
+.result-status.danger  { background:var(--danger-light);color:var(--danger);border:1px solid #fed7d7; }
+
+.result-qr-thumb { width:72px;height:72px;border-radius:8px;border:1px solid var(--border);background:#fff;padding:4px; }
+
+.med-result-name h2 { font-size:26px;font-weight:800;letter-spacing:-0.5px;margin-bottom:4px; }
+.med-result-name p  { color:var(--text-2);font-size:15px;margin-bottom:12px; }
+.med-result-meta    { display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--text-2);margin-bottom:14px; }
+.med-result-meta b  { color:var(--text); }
+.med-result-badges  { display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px; }
+
+.med-info-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px; }
+.med-info-box { background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px; }
+.med-info-box.danger { background:var(--danger-light);border-color:#fed7d7; }
+.med-info-box h4 { font-size:11px;font-weight:700;color:var(--text-3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px; }
+.med-info-box p  { font-size:14px;font-weight:500; }
+.med-info-box small { font-size:12px;color:var(--text-3); }
+
+.warn-box { background:var(--warning-light);border:1px solid #feebc8;border-radius:var(--radius);padding:14px;margin-bottom:14px; }
+.warn-box h4 { font-size:12px;font-weight:700;color:var(--warning);text-transform:uppercase;margin-bottom:8px; }
+.warn-box ul { list-style:none;display:flex;flex-direction:column;gap:4px; }
+.warn-box li { font-size:13px;color:var(--text-2);padding-left:12px;position:relative; }
+.warn-box li::before { content:'•';position:absolute;left:0;color:var(--warning); }
+
+.se-list h4 { font-size:12px;font-weight:700;color:var(--text-3);text-transform:uppercase;margin-bottom:8px; }
+.se-item { display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg);border-radius:8px;border-left:3px solid;font-size:13px;margin-bottom:6px; }
+.se-sev  { font-size:10px;font-weight:700;text-transform:uppercase;min-width:60px; }
+
+.perf-row { font-size:12px;color:var(--text-3);margin:12px 0;padding:8px 12px;background:var(--bg);border-radius:8px; }
+
+.result-actions { display:flex;gap:10px;flex-wrap:wrap;margin-top:20px; }
+
+/* Patient result */
+.patient-card-inner { display:flex;align-items:center;gap:16px;margin:16px 0; }
+.p-avatar { width:56px;height:56px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;color:#fff;flex-shrink:0; }
+.patient-card-inner h2 { font-size:20px;font-weight:700;margin-bottom:4px; }
+
+/* Invalid screen */
+.invalid-screen { text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;padding:48px 28px; }
+.invalid-icon { font-size:64px; }
+.invalid-screen h3 { font-size:22px;font-weight:700; }
+
+@media (max-width:600px) {
+  .med-info-grid { grid-template-columns:1fr; }
+  .scan-tabs { flex-wrap:wrap; }
+  .scan-tab  { flex:none;flex-basis:calc(50% - 3px); }
+  .camera-section,.manual-section { padding:28px 16px; }
+}
+
+/* ── Patient scan: treatment + medicine display ── */
+.scan-treatments {
+  background: #f7fbff; border: 1.5px solid #d0e4f7;
+  border-radius: var(--radius, 10px); padding: 14px 16px; margin: 14px 0;
+}
+.scan-treatment-row {
+  border-bottom: 1px solid #e8f2ff; padding: 10px 0;
+}
+.scan-treatment-row:last-child { border-bottom: none; }
+.scan-tx-disease { display: flex; align-items: center; margin-bottom: 8px; }
+.scan-presc-list { padding-left: 10px; }
+.scan-presc-item {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 8px; font-size: 13px; padding: 5px 0;
+  border-bottom: 1px dashed #e8f2ff;
+}
+.scan-presc-item:last-child { border-bottom: none; }
+.scan-med-name { font-weight: 700; color: var(--text, #1a2332); min-width: 140px; }

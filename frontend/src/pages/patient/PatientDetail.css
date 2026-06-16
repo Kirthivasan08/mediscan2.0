@@ -1,0 +1,114 @@
+/* Patient profile card */
+.patient-profile-card { display:flex;justify-content:space-between;align-items:flex-start;background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-xl);padding:28px;margin-bottom:20px;gap:24px;flex-wrap:wrap;box-shadow:var(--shadow-sm); }
+.pp-left { display:flex;align-items:flex-start;gap:20px;flex:1; }
+.pp-avatar { width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#0099ff);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;color:#fff;flex-shrink:0; }
+.pp-left h1 { font-size:24px;font-weight:800;letter-spacing:-0.4px;margin-bottom:8px; }
+.pp-meta { display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:14px; }
+.pp-vitals { display:flex;gap:16px;flex-wrap:wrap; }
+.pp-vital { display:flex;flex-direction:column;gap:2px; }
+.pp-vital small { font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em; }
+.pp-vital span { font-size:13.5px;font-weight:500; }
+.pp-vital.allergy span { font-size:13px; }
+
+.pp-qr { flex-shrink:0; }
+.pp-qr-img { width:140px;height:140px;background:#fff;border:1.5px solid var(--border);border-radius:var(--radius);padding:8px; }
+.pp-qr-img img { width:100%;height:auto; }
+
+/* Emergency contact */
+.ec-card { margin-bottom:20px;padding:20px; }
+.ec-card h3 { font-size:15px;font-weight:700;margin-bottom:12px; }
+.ec-info { display:flex;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--text-2); }
+.ec-info b { color:var(--text); }
+
+/* Treatment section */
+.treatment-section { }
+.treatment-header { display:flex;justify-content:space-between;align-items:center;margin-bottom:16px; }
+.treatment-header h2 { font-size:20px;font-weight:700; }
+
+.treat-tabs { display:flex;gap:6px;margin-bottom:16px;background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);padding:5px; }
+.treat-tab  { flex:1;padding:9px;border:none;background:none;color:var(--text-2);font-family:'Sora',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer;border-radius:var(--radius);transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px; }
+.treat-tab.active { background:var(--primary);color:#fff; }
+.treat-tab:not(.active):hover { background:var(--bg-2);color:var(--text); }
+.tab-count { background:rgba(0,0,0,0.12);border-radius:20px;padding:1px 7px;font-size:11px; }
+.treat-tab.active .tab-count { background:rgba(255,255,255,0.25); }
+
+.empty-treatment { text-align:center;padding:48px;color:var(--text-2);display:flex;flex-direction:column;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg); }
+
+/* Treatment cards — like Figure 4 in the paper */
+.treatments-list { display:flex;flex-direction:column;gap:14px; }
+.treatment-card { background:#fff;border:1.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm); }
+
+.tx-header { display:flex;justify-content:space-between;align-items:flex-start;padding:20px 20px 0;gap:16px;flex-wrap:wrap; }
+.tx-title-area { flex:1; }
+.tx-badges { display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px; }
+.tx-disease { font-size:18px;font-weight:700;margin-bottom:6px; }
+.tx-meta { display:flex;gap:14px;font-size:13px;color:var(--text-2);flex-wrap:wrap; }
+.tx-dates { display:flex;gap:16px;flex-shrink:0;text-align:right; }
+.tx-dates small { font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;display:block;margin-bottom:3px; }
+.tx-dates p { font-size:13px;font-weight:600; }
+
+.tx-notes { padding:0 20px;font-size:14px;color:var(--text-2);margin:12px 0;line-height:1.5; }
+
+/* Prescriptions */
+.tx-prescriptions { padding:16px 20px;border-top:1px solid var(--border);background:var(--bg); }
+.tx-prescriptions h4 { font-size:13px;font-weight:700;color:var(--text-3);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em; }
+.tx-presc-list { display:flex;flex-direction:column;gap:8px; }
+.presc-item { display:flex;align-items:center;gap:12px;padding:10px 14px;background:#fff;border:1px solid var(--border);border-radius:var(--radius);flex-wrap:wrap; }
+.presc-name { flex:1;font-size:14px;font-weight:600;min-width:120px; }
+.presc-name a { color:var(--primary);text-decoration:none; }
+.presc-name a:hover { text-decoration:underline; }
+.presc-details { display:flex;gap:8px;font-size:12px;color:var(--text-2);flex-wrap:wrap; }
+
+/* Visits */
+.tx-visits { padding:14px 20px;border-top:1px solid var(--border); }
+.tx-visits h4 { font-size:13px;font-weight:700;color:var(--text-3);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em; }
+.visit-item { display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--border); }
+.visit-item:last-child { border-bottom:none; }
+.visit-date  { font-size:12px;font-weight:600;color:var(--primary);white-space:nowrap;min-width:90px; }
+.visit-notes { font-size:13px;color:var(--text-2); }
+
+@media (max-width:700px) {
+  .pp-qr { display:none; }
+  .tx-header { flex-direction:column; }
+  .tx-dates { flex-direction:row;text-align:left; }
+}
+
+/* ── Pharmacist active medicine table ─────── */
+.pharmacist-rx-card { border-left: 4px solid var(--primary); }
+.pharmacist-rx-header {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; font-weight: 700; color: var(--primary); margin-bottom: 8px;
+}
+.pharm-med-table { border: 1px solid #e8f2ff; border-radius: var(--radius); overflow: hidden; margin-bottom: 12px; }
+.pharm-med-row {
+  display: grid; grid-template-columns: 2fr 1fr 2fr 1.5fr 1.5fr;
+  gap: 8px; padding: 10px 14px; border-bottom: 1px solid #f0f6ff; font-size: 13px;
+  align-items: center;
+}
+.pharm-med-head {
+  background: #e8f2ff; font-weight: 700; font-size: 12px;
+  color: var(--primary); letter-spacing: 0.04em;
+}
+.pharm-med-row:last-child { border-bottom: none; }
+.pharm-med-name a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.pharm-med-name a:hover { text-decoration: underline; }
+.pharm-allergy-alert {
+  background: #fff5f5; border: 1.5px solid #fed7d7; border-radius: var(--radius);
+  padding: 10px 14px; font-size: 13px; color: #c53030;
+}
+@media (max-width: 700px) {
+  .pharm-med-row { grid-template-columns: 1fr 1fr; }
+  .pharm-med-head span:nth-child(n+3) { display: none; }
+}
+
+/* ── Expandable treatment card ────────────── */
+.treatment-card { transition: box-shadow 0.2s; }
+.treatment-card.expanded { box-shadow: 0 4px 20px rgba(0,119,204,0.10); }
+.tx-body { padding: 0 20px 20px; border-top: 1px solid #e8f2ff; margin-top: 4px; }
+.tx-actions { padding: 14px 0 10px; }
+.presc-instructions { font-size: 12px; color: var(--text-2); margin: 4px 0; }
+.visit-vitals {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  font-size: 12px; color: var(--primary); margin-top: 4px;
+}
+.ml-1 { margin-left: 6px; }
