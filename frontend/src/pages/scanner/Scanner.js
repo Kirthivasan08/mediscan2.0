@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Html5QrcodeScanner, Html5QrcodeSupportedFormats } from 'html5-qrcode';
 import { useAuth, API } from '../../context/AuthContext';
-// import { useLang } from '../../context/LangContext';
 import toast from 'react-hot-toast';
 import './Scanner.css';
 
@@ -14,8 +13,7 @@ const SCAN_TABS = [
 
 export default function Scanner() {
   const { user } = useAuth();
-  // const { t } = useLang();
-  // const navigate = useNavigate();
+
 
   const [tab,       setTab]       = useState('camera');
   const [scanning,  setScanning]  = useState(false);
