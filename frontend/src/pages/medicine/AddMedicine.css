@@ -44,3 +44,73 @@
   .fg2 { grid-template-columns:1fr; }
   .tag-input-row { flex-wrap:wrap; }
 }
+@media (max-width: 768px) {
+
+  .add-header {
+    text-align: center;
+  }
+
+  .add-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .section-nav {
+    position: static;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .sec-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-section {
+    padding: 16px;
+  }
+
+  .fs-title {
+    font-size: 16px;
+  }
+
+  .fg2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tag-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tag-input-row button {
+    width: 100%;
+  }
+
+  .list-item-row {
+    flex-wrap: wrap;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .form-footer .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .form-section {
+    padding: 12px;
+  }
+
+  .tag {
+    font-size: 11px;
+  }
+
+  .list-item-row {
+    font-size: 12px;
+  }
+}

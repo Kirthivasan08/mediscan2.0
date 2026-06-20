@@ -189,3 +189,49 @@ textarea.form-input { resize: vertical; min-height: 90px; }
   .hide-mobile { display: none !important; }
   .page { padding: 20px 16px; }
 }
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+
+  * {
+    max-width: 100%;
+  }
+
+  .page {
+    padding: 15px;
+    overflow-x: hidden;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

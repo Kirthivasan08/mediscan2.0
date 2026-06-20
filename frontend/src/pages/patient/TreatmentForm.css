@@ -395,3 +395,77 @@
   margin-bottom: 8px; transition: all 0.15s;
 }
 .btn-add-rx:hover { background: #d0e8ff; border-style: solid; }
+
+@media (max-width: 768px) {
+
+  .treatment-form-page {
+    padding: 12px;
+  }
+
+  .treatment-form-card {
+    padding: 16px;
+  }
+
+  .treatment-form-header h2 {
+    font-size: 20px;
+  }
+
+  .presc-row-header,
+  .rx-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .presc-remove-btn,
+  .rx-remove {
+    width: 100%;
+  }
+
+  .tf-section-title,
+  .tf-section-label {
+    flex-wrap: wrap;
+  }
+
+  .med-search-item,
+  .med-drop-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .med-drop-main {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .btn-add-rx,
+  .btn-add-medicine {
+    width: 100%;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .treatment-form-header h2 {
+    font-size: 18px;
+  }
+
+  .presc-row,
+  .rx-card {
+    padding: 12px;
+  }
+
+  .med-search-name,
+  .med-drop-name {
+    font-size: 13px;
+  }
+}

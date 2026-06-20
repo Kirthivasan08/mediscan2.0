@@ -29,3 +29,61 @@
 .pagination { display:flex;justify-content:center;align-items:center;gap:16px; }
 
 @media (max-width:600px) { .meds-header { flex-direction:column;align-items:flex-start; } }
+
+@media (max-width: 768px) {
+
+  .meds-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-wrap {
+    min-width: 100%;
+  }
+
+  .search-bar .btn {
+    width: 100%;
+  }
+
+  .cat-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+  }
+
+  .cat-pill {
+    flex-shrink: 0;
+  }
+
+  .med-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .med-card {
+    padding: 14px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .med-card-name {
+    font-size: 14px;
+  }
+
+  .med-card-generic {
+    font-size: 11px;
+  }
+
+  .med-cat-icon {
+    font-size: 24px;
+  }
+}

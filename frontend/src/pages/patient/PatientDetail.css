@@ -112,3 +112,107 @@
   font-size: 12px; color: var(--primary); margin-top: 4px;
 }
 .ml-1 { margin-left: 6px; }
+
+@media (max-width: 768px) {
+
+  .patient-profile-card {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .pp-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pp-left h1 {
+    font-size: 20px;
+  }
+
+  .pp-vitals {
+    justify-content: center;
+  }
+
+  .pp-vital {
+    min-width: 120px;
+  }
+
+  .treatment-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .treat-tabs {
+    flex-direction: column;
+  }
+
+  .treat-tab {
+    width: 100%;
+  }
+
+  .tx-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tx-dates {
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .presc-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .presc-name {
+    width: 100%;
+  }
+
+  .visit-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .visit-date {
+    min-width: auto;
+  }
+
+  .pharm-med-table {
+    overflow-x: auto;
+  }
+
+  .pharm-med-row {
+    min-width: 700px;
+  }
+
+  .tx-body {
+    padding: 0 12px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .pp-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .pp-left h1 {
+    font-size: 18px;
+  }
+
+  .pp-vitals {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .empty-treatment {
+    padding: 24px 12px;
+  }
+}

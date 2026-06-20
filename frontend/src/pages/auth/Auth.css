@@ -99,3 +99,78 @@
 .auth-switch a:hover { text-decoration:underline; }
 
 @media (max-width:768px) { .auth-left { display:none; } }
+
+@media (max-width: 768px) {
+
+  .auth-page {
+    min-height: 100vh;
+    display: block;
+  }
+
+  .auth-right {
+    padding: 16px;
+    min-height: 100vh;
+  }
+
+  .auth-card {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .auth-logo {
+    justify-content: center;
+  }
+
+  .auth-title,
+  .auth-sub {
+    text-align: center;
+  }
+
+  .oauth-row {
+    flex-direction: column;
+  }
+
+  .oauth-btn {
+    width: 100%;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .role-btn {
+    min-height: 60px;
+  }
+
+  .demo-creds {
+    flex-direction: column;
+  }
+
+  .demo-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auth-card {
+    padding: 16px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+
+  .auth-logo span {
+    font-size: 18px;
+  }
+
+  .form-input {
+    font-size: 16px; /* iPhone zoom issue fix */
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+}

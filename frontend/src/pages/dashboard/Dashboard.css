@@ -132,3 +132,108 @@ a.hist-name:hover { color:var(--primary); }
 @media (max-width:1280px) { .stats-grid { grid-template-columns:repeat(3,1fr); } }
 @media (max-width:900px)  { .stats-grid { grid-template-columns:repeat(2,1fr); } .dash-two-col { grid-template-columns:1fr; } .health-metrics-grid, .progress-grid, .health-summary-row { grid-template-columns:1fr; } }
 @media (max-width:600px)  { .stats-grid { grid-template-columns:1fr 1fr; } .dash-hero { flex-direction:column;align-items:flex-start; } }
+
+@media (max-width: 768px) {
+
+  .dash-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px;
+  }
+
+  .dash-welcome {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dash-welcome h1 {
+    font-size: 20px;
+  }
+
+  .dash-hero-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .dash-hero-actions .btn {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .health-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-summary-row {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-qr-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pqr-img-wrap {
+    width: 140px;
+  }
+
+  .card-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+  }
+
+  .modal-card {
+    padding: 16px;
+  }
+
+  .modal-search-row {
+    flex-direction: column;
+  }
+
+  .modal-search-row button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .dash-welcome h1 {
+    font-size: 18px;
+  }
+
+  .stat-val {
+    font-size: 22px;
+  }
+
+  .health-card strong {
+    font-size: 20px;
+  }
+}

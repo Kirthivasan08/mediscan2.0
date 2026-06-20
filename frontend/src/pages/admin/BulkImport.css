@@ -26,3 +26,44 @@
 .format-tips li::before { content:'•';position:absolute;left:0;color:var(--primary); }
 
 @media (max-width:768px) { .bulk-layout { grid-template-columns:1fr; } }
+
+@media (max-width: 768px) {
+
+  .bulk-layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .drop-zone {
+    padding: 20px 16px;
+  }
+
+  .result-row {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  .export-col-list {
+    justify-content: center;
+  }
+
+  .format-tips {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .drop-zone {
+    padding: 16px 12px;
+  }
+
+  .export-col-tag {
+    font-size: 10px;
+  }
+
+  .format-tips li {
+    font-size: 11px;
+  }
+}
