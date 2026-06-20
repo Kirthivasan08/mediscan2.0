@@ -63,6 +63,25 @@ export default function Navbar() {
               {t('nav_add')}
             </Link>
           )}
+          {!user && (
+  <>
+    <Link
+      to="/login"
+      className="nav-link"
+      onClick={() => setMenu(false)}
+    >
+      Login
+    </Link>
+
+    <Link
+      to="/register"
+      className="nav-link"
+      onClick={() => setMenu(false)}
+    >
+      Register
+    </Link>
+  </>
+)}
         </div>
 
         <div className="nav-right">
@@ -103,7 +122,7 @@ export default function Navbar() {
               )}
             </div>
           ) : (
-            <div className="nav-auth">
+            <div className="nav-auth">  
               <Link to="/login"    className="btn btn-ghost btn-sm">{t('nav_login')}</Link>
               <Link to="/register" className="btn btn-primary btn-sm">{t('nav_register')}</Link>
             </div>
