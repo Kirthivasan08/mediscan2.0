@@ -3,14 +3,14 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 import './Auth.css';
-import { useLang } from '../../context/LangContext';
+// import { useLang } from '../../context/LangContext';
 
 export default function Login() {
   const [form, setForm]       = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [showPw, setShowPw]   = useState(false);
   const { login, user }       = useAuth();
-  const { t }                 = useLang();
+  // const { t }                 = useLang();
   const navigate              = useNavigate();
   const [params]              = useSearchParams();
 
