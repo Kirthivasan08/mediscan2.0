@@ -4,7 +4,8 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 const API_BASE_URL =
-  process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+  process.env.REACT_APP_API_URL ||
+  'https://mediscan2-0.onrender.com/api';
 
 // Axios instance
 export const API = axios.create({
