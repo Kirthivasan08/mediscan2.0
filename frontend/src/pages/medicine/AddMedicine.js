@@ -7,7 +7,7 @@ import './AddMedicine.css';
 const CATS     = ['other','analgesic','antibiotic','antiviral','antifungal','cardiovascular','diabetes','neurological','respiratory','gastrointestinal','vitamin','supplement','dermatology','ophthalmology','surgery','emergency'];
 const FORMS    = ['tablet','capsule','syrup','injection','cream','ointment','drops','inhaler','patch','suppository','powder','gel','oral','other'];
 const SEVS     = ['mild','moderate','severe'];
-const BLOOD    = ['A+','A-','B+','B-','AB+','AB-','O+','O-'];
+// const BLOOD    = ['A+','A-','B+','B-','AB+','AB-','O+','O-'];
 
 const blank = {
   name:'',genericName:'',brand:'',manufacturer:'',batchNumber:'',barcode:'',

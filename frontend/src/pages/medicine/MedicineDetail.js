@@ -4,7 +4,7 @@ import { useAuth, API } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 import './MedicineDetail.css';
 
-const TABS = ['overview','dosage','safety','storage','interactions'];
+// const TABS = ['overview','dosage','safety','storage','interactions'];
 
 export default function MedicineDetail() {
   const { id }       = useParams();
@@ -12,7 +12,7 @@ export default function MedicineDetail() {
   const [medicine, setMedicine] = useState(null);
   const [loading, setLoading]   = useState(true);
   const [saved,   setSaved]     = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
+  // const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     API.get(`/medicines/${id}`)
